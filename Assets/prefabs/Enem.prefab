@@ -144,11 +144,75 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7627086242567947272}
     m_Modifications:
+    - target: {fileID: 3931594257317940585, guid: 8607ac340c438884496f96340033114a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 770c7b9bae04c0a4e9049b0c08efec00,
+        type: 3}
+    - target: {fileID: 3931594257325888798, guid: 8607ac340c438884496f96340033114a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4eee7e3b34918f04bb775264cc88bb8e,
+        type: 3}
     - target: {fileID: 3931594257325888798, guid: 8607ac340c438884496f96340033114a,
         type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3931594257834901208, guid: 8607ac340c438884496f96340033114a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931594257834901208, guid: 8607ac340c438884496f96340033114a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931594257834901208, guid: 8607ac340c438884496f96340033114a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931594258274952658, guid: 8607ac340c438884496f96340033114a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f8fd4238c2e37614a9ba4ab1c7544549,
+        type: 3}
+    - target: {fileID: 3931594258274952658, guid: 8607ac340c438884496f96340033114a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931594258274952659, guid: 8607ac340c438884496f96340033114a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.91288537
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931594258274952659, guid: 8607ac340c438884496f96340033114a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7911969
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931594258274952659, guid: 8607ac340c438884496f96340033114a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931594258274952659, guid: 8607ac340c438884496f96340033114a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931594258654721852, guid: 8607ac340c438884496f96340033114a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 770c7b9bae04c0a4e9049b0c08efec00,
+        type: 3}
     - target: {fileID: 3931594258992521764, guid: 8607ac340c438884496f96340033114a,
         type: 3}
       propertyPath: m_RootOrder
@@ -216,8 +280,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3931594258992521818, guid: 8607ac340c438884496f96340033114a,
         type: 3}
+      propertyPath: m_Size.y
+      value: 2.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931594258992521818, guid: 8607ac340c438884496f96340033114a,
+        type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931594258992521818, guid: 8607ac340c438884496f96340033114a,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.11
       objectReference: {fileID: 0}
     - target: {fileID: 3931594258992521818, guid: 8607ac340c438884496f96340033114a,
         type: 3}
@@ -227,7 +301,7 @@ PrefabInstance:
     - target: {fileID: 3931594258992521819, guid: 8607ac340c438884496f96340033114a,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8607ac340c438884496f96340033114a, type: 3}
