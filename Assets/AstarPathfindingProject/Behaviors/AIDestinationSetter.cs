@@ -17,7 +17,10 @@ namespace Pathfinding {
 		/// <summary>The object that the AI should move to</summary>
 		public Transform target;
 		IAstarAI ai;
-
+		public Transform FirePoint;
+		public GameObject bulletPrefab;
+		private float timer;
+		private float timeBetweenAtack = 1f;
 		void OnEnable () {
 			ai = GetComponent<IAstarAI>();
 			// Update the destination right before searching for a path as well.
@@ -33,11 +36,25 @@ namespace Pathfinding {
 		void Start()
 		{
 			target = GameObject.Find("Tank").transform;
+			
 		}
-
+		
 		/// <summary>Updates the AI's destination every frame</summary>
 		void Update () {
-			if (target != null && ai != null) ai.destination = target.position;
+			if (target != null && ai != null)
+			{
+				ai.destination = target.position;
+				timer += Time.deltaTime;
+				if (timer >= timeBetweenAtack)
+				{
+					shoot();
+				}
+			}
+		}
+		public void shoot()
+		{
+			timer = 0;
+			Instantiate(bulletPrefab, FirePoint.position, FirePoint.rotation);
 		}
 	}
 }

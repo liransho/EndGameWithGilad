@@ -112,31 +112,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
---- !u!114 &7627086244087348388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7627086243291859948}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e258443c676336d4e99784734d8a35e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aiPath: {fileID: 7627086242567947270}
---- !u!114 &7627086244087348389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7627086243291859948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8e4a685fed974e4ca40530434f5819b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  FirePoint: {fileID: 0}
+  bulletPrefab: {fileID: 0}
 --- !u!1001 &6869975849057708490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -268,6 +245,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 3931594258992521765, guid: 8607ac340c438884496f96340033114a,
+        type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931594258992521765, guid: 8607ac340c438884496f96340033114a,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931594258992521765, guid: 8607ac340c438884496f96340033114a,
+        type: 3}
+      propertyPath: retreat
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931594258992521765, guid: 8607ac340c438884496f96340033114a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931594258992521765, guid: 8607ac340c438884496f96340033114a,
+        type: 3}
+      propertyPath: stopMoving
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3931594258992521765, guid: 8607ac340c438884496f96340033114a,
+        type: 3}
+      propertyPath: distanceBetweenTanks
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3931594258992521766, guid: 8607ac340c438884496f96340033114a,
         type: 3}
       propertyPath: m_Name
@@ -305,12 +312,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8607ac340c438884496f96340033114a, type: 3}
---- !u!1 &7627086243291859948 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3931594258992521766, guid: 8607ac340c438884496f96340033114a,
-    type: 3}
-  m_PrefabInstance: {fileID: 6869975849057708490}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7627086243291859950 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3931594258992521764, guid: 8607ac340c438884496f96340033114a,
