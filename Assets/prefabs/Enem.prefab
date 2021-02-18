@@ -112,8 +112,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
-  FirePoint: {fileID: 0}
-  bulletPrefab: {fileID: 0}
 --- !u!1001 &6869975849057708490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -305,12 +303,18 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3931594258992521818, guid: 8607ac340c438884496f96340033114a,
+        type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 3931594258992521819, guid: 8607ac340c438884496f96340033114a,
         type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3931594258992521819, guid: 8607ac340c438884496f96340033114a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8607ac340c438884496f96340033114a, type: 3}
 --- !u!4 &7627086243291859950 stripped
 Transform:
