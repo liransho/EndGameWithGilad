@@ -9,6 +9,9 @@ TagManager:
   - Arena
   - Enemy
   - explode
+  - speedPrize
+  - freezePrize
+  - slowPrize
   layers:
   - Default
   - TransparentFX

@@ -8,6 +8,8 @@ public class Tank : MonoBehaviour
     public Track trackLeft;
     public Track trackRight;
     public float moveSpeed = 100f;
+    public float normalMoveSpeed = 100f;
+    public GameObject [] enemies;
     bool moveForward = false;
     bool moveReverse = false;
     Rigidbody2D rb;
@@ -20,6 +22,7 @@ public class Tank : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKey(KeyCode.D))
         {
             transform.Rotate(Vector3.forward * -RotateSpeed * Time.deltaTime);
@@ -48,18 +51,46 @@ public class Tank : MonoBehaviour
         {
             trackStop();
         }
+        
+    }
+    void trackStart()
+    {
+        trackLeft.animator.SetBool("IsMove", true);
+        trackRight.animator.SetBool("IsMove", true);
+    }
 
-        void trackStart()
+    void trackStop()
+    {
+        trackLeft.animator.SetBool("IsMove", false);
+        trackRight.animator.SetBool("IsMove", false);
+    }
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "freezePrize")
         {
-            trackLeft.animator.SetBool("IsMove", true);
-            trackRight.animator.SetBool("IsMove", true);
+            GameObject.FindWithTag("freezePrize").SetActive(false);
+           /* enemies = GameObject.FindGameObjectsWithTag("Enemy");
+           for (int i=0; i < enemies.Length; i++) 
+            {
+                enemies[i].GetComponent<AIPath>().MyFunction();
+            }*/
         }
-
-        void trackStop()
+        if (col.gameObject.tag == "speedPrize")
         {
-            trackLeft.animator.SetBool("IsMove", false);
-            trackRight.animator.SetBool("IsMove", false);
+            GameObject.FindWithTag("speedPrize").SetActive(false);
+            moveSpeed = moveSpeed * 1.1f;
+            Invoke("returnSpeedToNormal", 10f);
         }
+        if (col.gameObject.tag == "slowPrize")
+        {
+            GameObject.FindWithTag("slowPrize").SetActive(false);
+            moveSpeed = moveSpeed * 0.1f;
+            Invoke("returnSpeedToNormal", 10f);
+        }
+    }
+    void returnSpeedToNormal()
+    {
+        moveSpeed = normalMoveSpeed;
     }
 
 }

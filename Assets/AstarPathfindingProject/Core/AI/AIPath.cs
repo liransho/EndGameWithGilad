@@ -484,4 +484,7 @@ namespace Pathfinding {
 			return 2;
 		}
 	}
+	
+	
+
 }
