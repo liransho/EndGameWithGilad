@@ -11,11 +11,12 @@ public class weapon : MonoBehaviour
     private float timer ;
     private float timeBetweenAtack = 0.5f;
     public float distanceBetweenTanks ;
-   
+  
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Tank").transform;
+
     }
     void Update()
     {
@@ -27,6 +28,8 @@ public class weapon : MonoBehaviour
                 shoot();
             }
         }
+
+    
 
     }
 

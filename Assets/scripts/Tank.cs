@@ -13,10 +13,14 @@ public class Tank : MonoBehaviour
     bool moveForward = false;
     bool moveReverse = false;
     Rigidbody2D rb;
+   
+    
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        
+     
     }
 
     // Update is called once per frame
@@ -69,11 +73,7 @@ public class Tank : MonoBehaviour
         if (col.gameObject.tag == "freezePrize")
         {
             GameObject.FindWithTag("freezePrize").SetActive(false);
-           /* enemies = GameObject.FindGameObjectsWithTag("Enemy");
-           for (int i=0; i < enemies.Length; i++) 
-            {
-                enemies[i].GetComponent<AIPath>().MyFunction();
-            }*/
+            
         }
         if (col.gameObject.tag == "speedPrize")
         {
@@ -88,6 +88,7 @@ public class Tank : MonoBehaviour
             Invoke("returnSpeedToNormal", 10f);
         }
     }
+  
     void returnSpeedToNormal()
     {
         moveSpeed = normalMoveSpeed;

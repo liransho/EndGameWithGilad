@@ -12,6 +12,7 @@ TagManager:
   - speedPrize
   - freezePrize
   - slowPrize
+  - Enem
   layers:
   - Default
   - TransparentFX

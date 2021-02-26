@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bullet : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class Bullet : MonoBehaviour
             exp = (GameObject)Instantiate(exp, transform.position, transform.rotation);
             Destroy(gameObject);
             Destroy(exp,0.2f);
+            SceneManager.LoadScene(2);
         }
 
     }
