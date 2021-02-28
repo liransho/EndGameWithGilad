@@ -8,7 +8,6 @@ public class EnemySpawn : MonoBehaviour
     public Transform[] spawnPoints;
     public Transform[] prizeSpawnPoints;
     public GameObject enemy;
-    public GameObject freezePrize;
     public GameObject speedPrize;
     public GameObject slowPrize;
     public bool[] prizeAlreadyUsed;
@@ -32,7 +31,7 @@ public class EnemySpawn : MonoBehaviour
             Instantiate(enemy, spawnPoints[enemyRandomIndex].position, Quaternion.identity); 
         }
         prizeAlreadyUsed = new bool[prizeSpawnPoints.Length];
-        for (int j=0; j < 4; j++)
+        for (int j=0; j < 2; j++)
         {
             prizeRandomIndex = Random.Range(0, prizeAlreadyUsed.Length);
             while (prizeAlreadyUsed[prizeRandomIndex] == true)
@@ -41,15 +40,12 @@ public class EnemySpawn : MonoBehaviour
             }
             prizeAlreadyUsed[prizeRandomIndex] = true;
             count++;
+           
             if (count == 1)
-            {
-                freezePrize = (GameObject)Instantiate(freezePrize, prizeSpawnPoints[prizeRandomIndex].position, Quaternion.identity);
-            }
-            else if (count == 2)
             {
                 speedPrize = (GameObject)Instantiate(speedPrize, prizeSpawnPoints[prizeRandomIndex].position, Quaternion.identity);
             }
-            else if (count == 3)
+            else if (count == 2)
             {
                 slowPrize = (GameObject)Instantiate(slowPrize, prizeSpawnPoints[prizeRandomIndex].position, Quaternion.identity);
             }
@@ -64,7 +60,7 @@ public class EnemySpawn : MonoBehaviour
 
         if (targetTime <= 0)
         {
-            Destroy(freezePrize,0.01f);
+            
             Destroy(speedPrize,0.01f);
             Destroy(slowPrize,0.01f);
             targetTime = 10f;
@@ -83,15 +79,12 @@ public class EnemySpawn : MonoBehaviour
                  }
                  prizeAlreadyUsed[prizeRandomIndex] = true;
                  count++;
+               
                  if (count == 1)
-                 {
-                     freezePrize = (GameObject)Instantiate(freezePrize, prizeSpawnPoints[prizeRandomIndex].position, Quaternion.identity);
-                 }
-                 else if (count == 2)
                  {
                      speedPrize = (GameObject)Instantiate(speedPrize, prizeSpawnPoints[prizeRandomIndex].position, Quaternion.identity);
                  }
-                 else if (count == 3)
+                 else if (count == 2)
                  {
                      slowPrize = (GameObject)Instantiate(slowPrize, prizeSpawnPoints[prizeRandomIndex].position, Quaternion.identity);
                  }

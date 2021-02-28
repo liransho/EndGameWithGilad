@@ -33,8 +33,10 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
             Destroy(exp,0.2f);
             counter++;
-            if(counter == 4)
+            Debug.Log(counter);
+            if(counter == 4 )
             {
+                counter = 0;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
 
@@ -47,7 +49,7 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
             Destroy(exp,0.2f);
             counter = 0;
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }
 
     }

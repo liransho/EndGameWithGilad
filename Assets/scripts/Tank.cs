@@ -70,15 +70,11 @@ public class Tank : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "freezePrize")
-        {
-            GameObject.FindWithTag("freezePrize").SetActive(false);
-            
-        }
+       
         if (col.gameObject.tag == "speedPrize")
         {
             GameObject.FindWithTag("speedPrize").SetActive(false);
-            moveSpeed = moveSpeed * 1.1f;
+            moveSpeed = moveSpeed * 2f;
             Invoke("returnSpeedToNormal", 10f);
         }
         if (col.gameObject.tag == "slowPrize")
